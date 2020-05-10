@@ -1,0 +1,17 @@
+version: '2.0'
+
+services:
+    nginx-web-host:
+        container_name: nginx-web-host
+        image: nginx:mainline-alpine
+        ports:
+            - "8080:80"
+        volumes:
+            - ./www:/usr/local/var/www
+            - ./nginx/conf.d:/etc/nginx/conf.d
+            - ./nginx/logs:/var/log/nginx
+    php7.4-fpm:
+        container_name: php7.4-fpm
+        image: francoisprigent/php7.4-fpm:latest
+        volumes:
+            - ./www:/usr/local/var/www

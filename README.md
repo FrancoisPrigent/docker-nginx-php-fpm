@@ -3,7 +3,7 @@ PHP sandbox as a base to work with php in containerized environment.
 
 # Usage
 In you terminal inside the projet run:
-> docker-composer up
+> docker-compose up
 
 Browse to localhost:8080, you should see the the www/index.html content. Use the nav to land on phpinfo and 404 pages and take a look into the log files.
 
